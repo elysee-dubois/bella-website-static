@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact · Bella App</title>
+<meta name="description" content="Have a question, suggestion, or just want to learn more about Bella? Get in touch." />
+<link rel="canonical" href="https://bellaapp.au/contact" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="Contact · Bella App" />
+<meta property="og:description" content="Have a question, suggestion, or just want to learn more about Bella? Get in touch." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Bella App" />
+<meta property="og:url" content="https://bellaapp.au/contact" />
+<meta property="og:image" content="https://bellaapp.au/assets/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact · Bella App" />
+<meta name="twitter:description" content="Have a question, suggestion, or just want to learn more about Bella? Get in touch." />
+<meta name="twitter:image" content="https://bellaapp.au/assets/og-image.jpg" />
+
+<!-- Favicon: the bubblegum-cherry brandmark star. -->
+<link rel="icon" type="image/png" href="/assets/bella-star.png" />
+<link rel="apple-touch-icon" href="/assets/bella-star.png" />
+
+<!-- Fonts: Inter (sans) and Instrument Serif (display). -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+/>
+
+<!-- Compiled Tailwind output. Built by `npm run build:css`. -->
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<!-- Organization schema. Google uses this to build the brand entity that
+     appears in the right-side Knowledge Panel and other rich results. The
+     `logo` URL points at the wordmark; the favicon (star) is set above and
+     handled separately by Google as the search-result favicon. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bella App",
+  "url": "https://bellaapp.au",
+  "logo": "https://bellaapp.au/assets/bella-wordmark.png",
+  "sameAs": [
+    "https://www.instagram.com/joinbella.au/",
+    "https://www.tiktok.com/@bellaapp.au",
+    "https://www.linkedin.com/company/bellaapp/"
+  ]
+}
+</script>
+
+</head>
+<body class="min-h-full flex flex-col bg-cream text-ink antialiased" data-audience="consumer">
+<header
+  data-nav-root
+  data-scrolled="false"
+  data-menu-open="false"
+  data-audience="consumer"
+  class="sticky top-0 z-50 w-full pt-0 px-0 data-[scrolled=true]:pt-3 sm:data-[scrolled=true]:pt-4 data-[scrolled=true]:px-2 sm:data-[scrolled=true]:px-3 transition-[padding] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+>
+  <div
+    class="mx-auto grid h-16 grid-cols-3 items-center transition-[background-color,border-color,box-shadow,backdrop-filter,padding,border-radius,max-width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+           max-w-[1280px] rounded-none border border-transparent bg-transparent px-6 sm:px-8 backdrop-blur-0
+           group-data-[scrolled=true]/header:max-w-[1120px]"
+    data-nav-bar
+  >
+    <!-- Logo -->
+    <div class="flex items-center">
+      <a href="/" aria-label="Bella home" class="inline-flex items-center">
+        <img src="/assets/bella-logo.png" alt="Bella" class="h-7 sm:h-8 w-auto" />
+      </a>
+    </div>
+
+    <!-- Desktop nav links -->
+    <nav class="hidden lg:flex items-center justify-center gap-8" data-nav-links>
+      <!-- Consumer links -->
+      <a href="/#features" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink data-[dark=true]:text-cream/80 data-[dark=true]:hover:text-cream">Features</a>
+      <a href="/#how-it-works" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink">How it works</a>
+      <a href="/blog" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink">Blog</a>
+      <a href="/#faq" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink">FAQ</a>
+      <a href="/contact" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink">Contact</a>
+
+      <!-- Business links -->
+      <a href="/business#features" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">Features</a>
+      <a href="/business#how-it-works" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">How it works</a>
+      <a href="/blog" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">Blog</a>
+      <a href="/business#faq" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">FAQ</a>
+      <a href="/contact" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">Contact</a>
+    </nav>
+
+    <!-- Right side: CTA + audience toggle -->
+    <div class="hidden lg:flex items-center justify-end gap-2">
+      <a
+        data-audience-only="consumer"
+        href="https://apple.co/3ThFSL2"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 rounded-full bg-bubblegum px-4 py-2 text-sm font-medium text-white shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset,0_4px_14px_-6px_rgba(254,93,144,0.6)] transition-all hover:-translate-y-[1px] hover:bg-[#fd4985]"
+      >
+        <svg viewBox="0 0 24 24" class="size-3.5" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.69 2.2-3.99 2.3-4.05-1.25-1.83-3.2-2.08-3.89-2.11-1.66-.17-3.24.97-4.08.97-.85 0-2.15-.95-3.54-.92-1.82.03-3.5 1.06-4.44 2.69-1.89 3.28-.48 8.13 1.36 10.79.9 1.31 1.97 2.77 3.37 2.72 1.36-.06 1.87-.88 3.51-.88 1.64 0 2.1.88 3.53.85 1.46-.03 2.38-1.32 3.27-2.64 1.03-1.51 1.45-2.98 1.47-3.06-.03-.01-2.83-1.08-2.86-4.36zM14.36 4.27c.74-.9 1.24-2.15 1.1-3.39-1.07.04-2.36.71-3.13 1.6-.69.79-1.29 2.06-1.13 3.27 1.19.09 2.42-.6 3.16-1.48z"/></svg>
+        Get the app
+      </a>
+
+      <a
+        data-audience-only="consumer"
+        href="/business"
+        class="group inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm transition-all border-ink/10 bg-white/60 text-ink hover:border-ink/20 hover:bg-white"
+      >
+        For salons
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <a
+        data-audience-only="business"
+        href="/"
+        class="group inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm transition-all border-white/20 bg-white/10 text-cream hover:border-white/35 hover:bg-white/15"
+      >
+        For beauty lovers
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <!-- Mobile menu toggle -->
+    <button
+      data-nav-toggle
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      class="lg:hidden col-start-3 justify-self-end -mr-2 inline-flex size-10 items-center justify-center rounded-full transition-colors text-ink hover:bg-ink/5"
+    >
+      <svg data-icon-open viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg data-icon-close viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-5 hidden" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div
+    data-nav-drawer
+    class="lg:hidden absolute inset-x-4 top-full mt-2 rounded-3xl border border-ink/[0.08] bg-white/90 backdrop-blur-xl shadow-[0_20px_40px_-12px_rgba(22,21,22,0.25)] transition-opacity duration-200 opacity-0 invisible group-data-[menu-open=true]/header:opacity-100 group-data-[menu-open=true]/header:visible"
+  >
+    <div class="flex flex-col gap-1 px-3 py-3">
+      <a data-audience-only="consumer" href="/#features" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Features</a>
+      <a data-audience-only="consumer" href="/#how-it-works" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">How it works</a>
+      <a data-audience-only="consumer" href="/blog" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Blog</a>
+      <a data-audience-only="consumer" href="/#faq" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">FAQ</a>
+      <a data-audience-only="consumer" href="/contact" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Contact</a>
+
+      <a data-audience-only="business" href="/business#features" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Features</a>
+      <a data-audience-only="business" href="/business#how-it-works" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">How it works</a>
+      <a data-audience-only="business" href="/blog" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Blog</a>
+      <a data-audience-only="business" href="/business#faq" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">FAQ</a>
+      <a data-audience-only="business" href="/contact" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Contact</a>
+
+      <div class="mt-2 flex flex-col gap-2 border-t border-ink/[0.07] pt-3">
+        <a data-audience-only="consumer" href="/business" class="inline-flex items-center justify-between rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">
+          For salons
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a data-audience-only="business" href="/" class="inline-flex items-center justify-between rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">
+          For beauty lovers
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a data-audience-only="consumer" href="https://apple.co/3ThFSL2" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-bubblegum text-white text-[15px] font-medium shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset,0_8px_24px_-12px_rgba(254,93,144,0.6)] hover:bg-[#fd4985]">
+          <svg viewBox="0 0 24 24" class="size-4" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.69 2.2-3.99 2.3-4.05-1.25-1.83-3.2-2.08-3.89-2.11-1.66-.17-3.24.97-4.08.97-.85 0-2.15-.95-3.54-.92-1.82.03-3.5 1.06-4.44 2.69-1.89 3.28-.48 8.13 1.36 10.79.9 1.31 1.97 2.77 3.37 2.72 1.36-.06 1.87-.88 3.51-.88 1.64 0 2.1.88 3.53.85 1.46-.03 2.38-1.32 3.27-2.64 1.03-1.51 1.45-2.98 1.47-3.06-.03-.01-2.83-1.08-2.86-4.36zM14.36 4.27c.74-.9 1.24-2.15 1.1-3.39-1.07.04-2.36.71-3.13 1.6-.69.79-1.29 2.06-1.13 3.27 1.19.09 2.42-.6 3.16-1.48z"/></svg>
+          Get the app
+        </a>
+        <a data-audience-only="business" href="https://salons.bellaapp.au/" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-bubblegum text-white text-[15px] font-medium shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset,0_8px_24px_-12px_rgba(254,93,144,0.6)] hover:bg-[#fd4985]">
+          Get started
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="flex-1">
+
+
+<section class="bg-cream pt-12 sm:pt-16 pb-32">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8">
+    <div data-reveal>
+      <a href="/" class="inline-flex items-center gap-1.5 text-sm text-charcoal-600 hover:text-ink">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back home
+      </a>
+    </div>
+    <div data-reveal class="mt-10">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/[0.08] bg-white text-charcoal-700">Contact</span>
+        <h1 class="display mt-6 text-[clamp(2.75rem,7vw,5.5rem)]">We&rsquo;re here to help.</h1>
+        <p class="mt-6 max-w-xl text-[18px] leading-relaxed text-charcoal-600">Have a question, suggestion, or just want to learn more about Bella? Drop us a note - we read every message.</p>
+      </div>
+    </div>
+
+    <div class="mt-16 grid gap-12 lg:grid-cols-[1.2fr_1fr]">
+      <div data-reveal>
+        <div class="rounded-3xl border border-ink/[0.07] bg-white p-6 sm:p-10">
+          <!-- Contact form -->
+          <form data-contact-form class="space-y-5" novalidate>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <label class="block">
+                <span class="block text-sm font-medium text-ink">Your name</span>
+                <div class="mt-2">
+                  <input data-input name="name" type="text" required autocomplete="name" placeholder="Jane Cooper" class="h-11 w-full rounded-xl border bg-white px-4 text-[15px] text-ink placeholder:text-charcoal-400 transition-colors border-ink/10 focus:border-ink/30 focus:outline-none focus:ring-2 focus:ring-ink/5" />
+                </div>
+                <p data-field-error="name" class="mt-2 text-xs text-cherry"></p>
+              </label>
+              <label class="block">
+                <span class="block text-sm font-medium text-ink">Email</span>
+                <div class="mt-2">
+                  <input data-input name="email" type="email" required autocomplete="email" placeholder="you@email.com" class="h-11 w-full rounded-xl border bg-white px-4 text-[15px] text-ink placeholder:text-charcoal-400 transition-colors border-ink/10 focus:border-ink/30 focus:outline-none focus:ring-2 focus:ring-ink/5" />
+                </div>
+                <p data-field-error="email" class="mt-2 text-xs text-cherry"></p>
+              </label>
+            </div>
+
+            <fieldset class="block">
+              <legend class="block text-sm font-medium text-ink">What&rsquo;s it about?</legend>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <label class="cursor-pointer">
+                  <input type="radio" name="topic" value="general" checked class="peer sr-only" />
+                  <span class="inline-flex h-9 items-center rounded-full border border-ink/10 bg-white px-4 text-sm text-charcoal-600 transition-colors peer-checked:border-ink peer-checked:bg-ink peer-checked:text-cream hover:border-ink/30">General</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="topic" value="salon" class="peer sr-only" />
+                  <span class="inline-flex h-9 items-center rounded-full border border-ink/10 bg-white px-4 text-sm text-charcoal-600 transition-colors peer-checked:border-ink peer-checked:bg-ink peer-checked:text-cream hover:border-ink/30">I'm a salon</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="topic" value="press" class="peer sr-only" />
+                  <span class="inline-flex h-9 items-center rounded-full border border-ink/10 bg-white px-4 text-sm text-charcoal-600 transition-colors peer-checked:border-ink peer-checked:bg-ink peer-checked:text-cream hover:border-ink/30">Press</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="topic" value="support" class="peer sr-only" />
+                  <span class="inline-flex h-9 items-center rounded-full border border-ink/10 bg-white px-4 text-sm text-charcoal-600 transition-colors peer-checked:border-ink peer-checked:bg-ink peer-checked:text-cream hover:border-ink/30">Support</span>
+                </label>
+              </div>
+              <p data-field-error="topic" class="mt-2 text-xs text-cherry"></p>
+            </fieldset>
+
+            <label class="block">
+              <span class="block text-sm font-medium text-ink">Message</span>
+              <div class="mt-2">
+                <textarea data-input name="message" rows="6" required placeholder="Tell us a bit about what you're after." class="h-11 w-full rounded-xl border bg-white px-4 text-[15px] text-ink placeholder:text-charcoal-400 transition-colors border-ink/10 focus:border-ink/30 focus:outline-none focus:ring-2 focus:ring-ink/5 min-h-[160px] resize-y py-3"></textarea>
+              </div>
+              <p data-field-error="message" class="mt-2 text-xs text-cherry"></p>
+            </label>
+
+            <p data-form-error class="hidden text-sm text-cherry"></p>
+
+            <div class="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
+              <p class="text-xs text-charcoal-400">We&rsquo;ll only use your details to reply. No marketing, ever.</p>
+              <button data-submit type="submit" class="inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-[15px] font-medium transition-all duration-300 ease-out will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-bubblegum text-white hover:bg-[#fd4985] hover:-translate-y-[1px] shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset,0_8px_24px_-12px_rgba(254,93,144,0.6)] focus-visible:ring-bubblegum focus-visible:ring-offset-cream whitespace-nowrap">
+                <span data-label-idle class="inline-flex items-center gap-2">Send message</span>
+                <span data-label-loading class="hidden inline-flex items-center gap-2">
+                  <span class="spinner"></span>
+                  Sending&hellip;
+                </span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Success card (hidden until form succeeds) -->
+          <div data-contact-success class="hidden text-center">
+            <div class="mx-auto flex size-12 items-center justify-center rounded-full bg-cherry text-white">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 class="mt-6 font-display text-3xl tracking-tight">Thank you - we&rsquo;ll be in touch.</h3>
+            <p class="mt-3 text-[15px] text-charcoal-600">Your message landed safely. We try to reply within two business days.</p>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal style="--reveal-delay: 0.1s">
+        <aside class="space-y-3">
+          <p class="eyebrow text-charcoal-400">Other ways to reach us</p>
+          <a href="mailto:hello@bellaapp.au" class="group flex items-center justify-between gap-4 rounded-2xl border border-ink/[0.07] bg-white p-5 transition-colors hover:bg-fawn-50">
+            <span class="flex items-center gap-4">
+              <span class="flex size-10 items-center justify-center rounded-full bg-cream text-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span>
+              <span><span class="block text-sm font-medium text-ink">Email</span><span class="block text-sm text-charcoal-600">hello@bellaapp.au</span></span>
+            </span>
+            <span class="text-charcoal-400 transition-transform group-hover:translate-x-0.5">→</span>
+          </a>
+          <a href="https://www.instagram.com/joinbella.au/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between gap-4 rounded-2xl border border-ink/[0.07] bg-white p-5 transition-colors hover:bg-fawn-50">
+            <span class="flex items-center gap-4">
+              <span class="flex size-10 items-center justify-center rounded-full bg-cream text-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </span>
+              <span><span class="block text-sm font-medium text-ink">Instagram</span><span class="block text-sm text-charcoal-600">@joinbella.au</span></span>
+            </span>
+            <span class="text-charcoal-400 transition-transform group-hover:translate-x-0.5">→</span>
+          </a>
+          <a href="https://www.tiktok.com/@bellaapp.au" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between gap-4 rounded-2xl border border-ink/[0.07] bg-white p-5 transition-colors hover:bg-fawn-50">
+            <span class="flex items-center gap-4">
+              <span class="flex size-10 items-center justify-center rounded-full bg-cream text-ink">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="size-4" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.79a8.16 8.16 0 0 0 4.77 1.52V6.86a4.85 4.85 0 0 1-1.84-.17z"/></svg>
+              </span>
+              <span><span class="block text-sm font-medium text-ink">TikTok</span><span class="block text-sm text-charcoal-600">@bellaapp.au</span></span>
+            </span>
+            <span class="text-charcoal-400 transition-transform group-hover:translate-x-0.5">→</span>
+          </a>
+          <a href="https://www.linkedin.com/company/bellaapp/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between gap-4 rounded-2xl border border-ink/[0.07] bg-white p-5 transition-colors hover:bg-fawn-50">
+            <span class="flex items-center gap-4">
+              <span class="flex size-10 items-center justify-center rounded-full bg-cream text-ink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </span>
+              <span><span class="block text-sm font-medium text-ink">LinkedIn</span><span class="block text-sm text-charcoal-600">Bella</span></span>
+            </span>
+            <span class="text-charcoal-400 transition-transform group-hover:translate-x-0.5">→</span>
+          </a>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="/assets/js/contact.js"></script>
+
+</main>
+<footer class="mt-24 border-t border-ink/[0.07] bg-cream">
+  <div class="mx-auto max-w-7xl px-6 sm:px-8 py-16">
+    <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+      <div class="max-w-sm">
+        <a href="/" aria-label="Bella home" class="inline-flex items-center">
+          <img src="/assets/bella-logo.png" alt="Bella" class="h-7 sm:h-8 w-auto" />
+        </a>
+        <p class="eyebrow mt-5 text-charcoal-400">Made with love · Sydney, AU</p>
+        <div class="mt-6 flex items-center gap-2">
+          <a href="https://www.instagram.com/joinbella.au/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex size-9 items-center justify-center rounded-full border border-ink/10 text-charcoal-600 hover:border-ink/20 hover:text-ink transition-colors">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@bellaapp.au" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="inline-flex size-9 items-center justify-center rounded-full border border-ink/10 text-charcoal-600 hover:border-ink/20 hover:text-ink transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="size-4" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.79a8.16 8.16 0 0 0 4.77 1.52V6.86a4.85 4.85 0 0 1-1.84-.17z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/bellaapp/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex size-9 items-center justify-center rounded-full border border-ink/10 text-charcoal-600 hover:border-ink/20 hover:text-ink transition-colors">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="eyebrow text-charcoal-400">Beauty lovers</h4>
+        <ul class="mt-5 space-y-3">
+          <li><a href="/" class="text-[15px] text-ink/80 hover:text-ink">Home</a></li>
+          <li><a href="/#features" class="text-[15px] text-ink/80 hover:text-ink">Features</a></li>
+          <li><a href="/#how-it-works" class="text-[15px] text-ink/80 hover:text-ink">How it works</a></li>
+          <li><a href="/#faq" class="text-[15px] text-ink/80 hover:text-ink">FAQ</a></li>
+          <li><a href="https://apple.co/3ThFSL2" target="_blank" rel="noopener noreferrer" class="text-[15px] text-ink/80 hover:text-ink">Download</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="eyebrow text-charcoal-400">Salons</h4>
+        <ul class="mt-5 space-y-3">
+          <li><a href="/business" class="text-[15px] text-ink/80 hover:text-ink">For salons</a></li>
+          <li><a href="/business#how-it-works" class="text-[15px] text-ink/80 hover:text-ink">How it works</a></li>
+          <li><a href="/business#faq" class="text-[15px] text-ink/80 hover:text-ink">FAQ</a></li>
+          <li><a href="https://salons.bellaapp.au/" target="_blank" rel="noopener noreferrer" class="text-[15px] text-ink/80 hover:text-ink">Salon login</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="eyebrow text-charcoal-400">Company</h4>
+        <ul class="mt-5 space-y-3">
+          <li><a href="/blog" class="text-[15px] text-ink/80 hover:text-ink">Blog</a></li>
+          <li><a href="/contact" class="text-[15px] text-ink/80 hover:text-ink">Contact</a></li>
+          <li><a href="/privacy" class="text-[15px] text-ink/80 hover:text-ink">Privacy</a></li>
+          <li><a href="/web-terms" class="text-[15px] text-ink/80 hover:text-ink">Web terms</a></li>
+          <li><a href="/app-terms" class="text-[15px] text-ink/80 hover:text-ink">App terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-col-reverse items-start justify-between gap-4 border-t border-ink/[0.07] pt-6 sm:flex-row sm:items-center">
+      <p class="text-xs text-charcoal-400">© 2026 Bella App Pty Ltd. All rights reserved.</p>
+      <a href="mailto:hello@bellaapp.au" class="text-xs text-charcoal-600 hover:text-ink">hello@bellaapp.au</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Global JS, used by every page. Form-specific JS is loaded only on
+     pages that have those forms (contact.html, playstore.html). -->
+<script type="module" src="/assets/js/nav.js"></script>
+<script type="module" src="/assets/js/reveal.js"></script>
+<script type="module" src="/assets/js/faq.js"></script>
+<script type="module" src="/assets/js/tabs.js"></script>
+<script type="module" src="/assets/js/parallax.js"></script>
+
+</body>
+</html>
+

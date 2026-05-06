@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bella App - Beauty with friends</title>
+<meta name="description" content="Your ultimate beauty app. Find salons you can trust. See where your friends are visiting and loving, so you can book your next appointment with confidence." />
+<link rel="canonical" href="https://bellaapp.au/" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="Bella App - Beauty with friends" />
+<meta property="og:description" content="Your ultimate beauty app. Find salons you can trust. See where your friends are visiting and loving, so you can book your next appointment with confidence." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Bella App" />
+<meta property="og:url" content="https://bellaapp.au/" />
+<meta property="og:image" content="https://bellaapp.au/assets/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Bella App - Beauty with friends" />
+<meta name="twitter:description" content="Your ultimate beauty app. Find salons you can trust. See where your friends are visiting and loving, so you can book your next appointment with confidence." />
+<meta name="twitter:image" content="https://bellaapp.au/assets/og-image.jpg" />
+
+<!-- Favicon: the bubblegum-cherry brandmark star. -->
+<link rel="icon" type="image/png" href="/assets/bella-star.png" />
+<link rel="apple-touch-icon" href="/assets/bella-star.png" />
+
+<!-- Fonts: Inter (sans) and Instrument Serif (display). -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+/>
+
+<!-- Compiled Tailwind output. Built by `npm run build:css`. -->
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<!-- Organization schema. Google uses this to build the brand entity that
+     appears in the right-side Knowledge Panel and other rich results. The
+     `logo` URL points at the wordmark; the favicon (star) is set above and
+     handled separately by Google as the search-result favicon. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bella App",
+  "url": "https://bellaapp.au",
+  "logo": "https://bellaapp.au/assets/bella-wordmark.png",
+  "sameAs": [
+    "https://www.instagram.com/joinbella.au/",
+    "https://www.tiktok.com/@bellaapp.au",
+    "https://www.linkedin.com/company/bellaapp/"
+  ]
+}
+</script>
+
+</head>
+<body class="min-h-full flex flex-col bg-cream text-ink antialiased" data-audience="consumer">
+<header
+  data-nav-root
+  data-scrolled="false"
+  data-menu-open="false"
+  data-audience="consumer"
+  class="sticky top-0 z-50 w-full pt-0 px-0 data-[scrolled=true]:pt-3 sm:data-[scrolled=true]:pt-4 data-[scrolled=true]:px-2 sm:data-[scrolled=true]:px-3 transition-[padding] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+>
+  <div
+    class="mx-auto grid h-16 grid-cols-3 items-center transition-[background-color,border-color,box-shadow,backdrop-filter,padding,border-radius,max-width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+           max-w-[1280px] rounded-none border border-transparent bg-transparent px-6 sm:px-8 backdrop-blur-0
+           group-data-[scrolled=true]/header:max-w-[1120px]"
+    data-nav-bar
+  >
+    <!-- Logo -->
+    <div class="flex items-center">
+      <a href="/" aria-label="Bella home" class="inline-flex items-center">
+        <img src="/assets/bella-logo.png" alt="Bella" class="h-7 sm:h-8 w-auto" />
+      </a>
+    </div>
+
+    <!-- Desktop nav links -->
+    <nav class="hidden lg:flex items-center justify-center gap-8" data-nav-links>
+      <!-- Consumer links -->
+      <a href="/#features" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink data-[dark=true]:text-cream/80 data-[dark=true]:hover:text-cream">Features</a>
+      <a href="/#how-it-works" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink">How it works</a>
+      <a href="/blog" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink">Blog</a>
+      <a href="/#faq" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink">FAQ</a>
+      <a href="/contact" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink">Contact</a>
+
+      <!-- Business links -->
+      <a href="/business#features" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">Features</a>
+      <a href="/business#how-it-works" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">How it works</a>
+      <a href="/blog" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">Blog</a>
+      <a href="/business#faq" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">FAQ</a>
+      <a href="/contact" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">Contact</a>
+    </nav>
+
+    <!-- Right side: CTA + audience toggle -->
+    <div class="hidden lg:flex items-center justify-end gap-2">
+      <a
+        data-audience-only="consumer"
+        href="https://apple.co/3ThFSL2"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 rounded-full bg-bubblegum px-4 py-2 text-sm font-medium text-white shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset,0_4px_14px_-6px_rgba(254,93,144,0.6)] transition-all hover:-translate-y-[1px] hover:bg-[#fd4985]"
+      >
+        <svg viewBox="0 0 24 24" class="size-3.5" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.69 2.2-3.99 2.3-4.05-1.25-1.83-3.2-2.08-3.89-2.11-1.66-.17-3.24.97-4.08.97-.85 0-2.15-.95-3.54-.92-1.82.03-3.5 1.06-4.44 2.69-1.89 3.28-.48 8.13 1.36 10.79.9 1.31 1.97 2.77 3.37 2.72 1.36-.06 1.87-.88 3.51-.88 1.64 0 2.1.88 3.53.85 1.46-.03 2.38-1.32 3.27-2.64 1.03-1.51 1.45-2.98 1.47-3.06-.03-.01-2.83-1.08-2.86-4.36zM14.36 4.27c.74-.9 1.24-2.15 1.1-3.39-1.07.04-2.36.71-3.13 1.6-.69.79-1.29 2.06-1.13 3.27 1.19.09 2.42-.6 3.16-1.48z"/></svg>
+        Get the app
+      </a>
+
+      <a
+        data-audience-only="consumer"
+        href="/business"
+        class="group inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm transition-all border-ink/10 bg-white/60 text-ink hover:border-ink/20 hover:bg-white"
+      >
+        For salons
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <a
+        data-audience-only="business"
+        href="/"
+        class="group inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm transition-all border-white/20 bg-white/10 text-cream hover:border-white/35 hover:bg-white/15"
+      >
+        For beauty lovers
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <!-- Mobile menu toggle -->
+    <button
+      data-nav-toggle
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      class="lg:hidden col-start-3 justify-self-end -mr-2 inline-flex size-10 items-center justify-center rounded-full transition-colors text-ink hover:bg-ink/5"
+    >
+      <svg data-icon-open viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg data-icon-close viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-5 hidden" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div
+    data-nav-drawer
+    class="lg:hidden absolute inset-x-4 top-full mt-2 rounded-3xl border border-ink/[0.08] bg-white/90 backdrop-blur-xl shadow-[0_20px_40px_-12px_rgba(22,21,22,0.25)] transition-opacity duration-200 opacity-0 invisible group-data-[menu-open=true]/header:opacity-100 group-data-[menu-open=true]/header:visible"
+  >
+    <div class="flex flex-col gap-1 px-3 py-3">
+      <a data-audience-only="consumer" href="/#features" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Features</a>
+      <a data-audience-only="consumer" href="/#how-it-works" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">How it works</a>
+      <a data-audience-only="consumer" href="/blog" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Blog</a>
+      <a data-audience-only="consumer" href="/#faq" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">FAQ</a>
+      <a data-audience-only="consumer" href="/contact" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Contact</a>
+
+      <a data-audience-only="business" href="/business#features" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Features</a>
+      <a data-audience-only="business" href="/business#how-it-works" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">How it works</a>
+      <a data-audience-only="business" href="/blog" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Blog</a>
+      <a data-audience-only="business" href="/business#faq" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">FAQ</a>
+      <a data-audience-only="business" href="/contact" class="rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">Contact</a>
+
+      <div class="mt-2 flex flex-col gap-2 border-t border-ink/[0.07] pt-3">
+        <a data-audience-only="consumer" href="/business" class="inline-flex items-center justify-between rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">
+          For salons
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a data-audience-only="business" href="/" class="inline-flex items-center justify-between rounded-xl px-3 py-3 text-base text-ink hover:bg-ink/5">
+          For beauty lovers
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a data-audience-only="consumer" href="https://apple.co/3ThFSL2" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-bubblegum text-white text-[15px] font-medium shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset,0_8px_24px_-12px_rgba(254,93,144,0.6)] hover:bg-[#fd4985]">
+          <svg viewBox="0 0 24 24" class="size-4" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.69 2.2-3.99 2.3-4.05-1.25-1.83-3.2-2.08-3.89-2.11-1.66-.17-3.24.97-4.08.97-.85 0-2.15-.95-3.54-.92-1.82.03-3.5 1.06-4.44 2.69-1.89 3.28-.48 8.13 1.36 10.79.9 1.31 1.97 2.77 3.37 2.72 1.36-.06 1.87-.88 3.51-.88 1.64 0 2.1.88 3.53.85 1.46-.03 2.38-1.32 3.27-2.64 1.03-1.51 1.45-2.98 1.47-3.06-.03-.01-2.83-1.08-2.86-4.36zM14.36 4.27c.74-.9 1.24-2.15 1.1-3.39-1.07.04-2.36.71-3.13 1.6-.69.79-1.29 2.06-1.13 3.27 1.19.09 2.42-.6 3.16-1.48z"/></svg>
+          Get the app
+        </a>
+        <a data-audience-only="business" href="https://salons.bellaapp.au/" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-bubblegum text-white text-[15px] font-medium shadow-[0_1px_0_0_rgba(255,255,255,0.2)_inset,0_8px_24px_-12px_rgba(254,93,144,0.6)] hover:bg-[#fd4985]">
+          Get started
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="flex-1">
+
+
+<!-- HERO -->
+<section class="relative overflow-hidden bg-cream pt-12 sm:pt-16 lg:pt-24 pb-20 sm:pb-28">
+  <div class="absolute inset-x-0 top-0 -z-10 h-[640px] bg-[radial-gradient(60%_60%_at_50%_0%,rgba(255,214,223,0.55)_0%,rgba(251,248,244,0)_70%)]"></div>
+  <div class="mx-auto w-full max-w-6xl px-6 sm:px-8">
+    <div class="flex flex-col items-center text-center">
+      <div data-reveal>
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/15 bg-white text-ink">
+          <span class="relative inline-flex size-1.5">
+            <span class="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75 animate-ping"></span>
+            <span class="relative inline-flex size-1.5 rounded-full bg-emerald-500"></span>
+          </span>
+          Now Live
+        </span>
+      </div>
+
+      <h1 data-reveal style="--reveal-delay: 0.1s" class="display mt-7 max-w-4xl text-balance text-[clamp(3.75rem,7vw,5.75rem)] text-ink">
+        <span>The future of beauty </span>
+        <br class="hidden sm:block" />
+        <span>feels like a </span>
+        <span class="italic text-cherry">dream.</span>
+      </h1>
+
+      <p data-reveal style="--reveal-delay: 0.25s" class="mt-7 max-w-xl text-balance text-lg leading-relaxed text-charcoal-600">
+        Beauty decisions, made easier. Discover trusted recs, real results, expert advice and local offers - all on Bella.
+      </p>
+
+      <div data-reveal style="--reveal-delay: 0.4s" class="mt-9 flex flex-wrap items-center justify-center gap-3">
+        <a href="https://apple.co/3ThFSL2" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" class="inline-flex h-12 items-center gap-3 rounded-full px-5 transition-all duration-300 will-change-transform hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 bg-white text-ink shadow-[0_1px_0_0_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.18)] hover:shadow-[0_1px_0_0_rgba(0,0,0,0.04),0_12px_28px_-12px_rgba(0,0,0,0.25)] focus-visible:ring-ink/30 focus-visible:ring-offset-cream">
+  <svg viewBox="0 0 24 24" class="size-7" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.69 2.2-3.99 2.3-4.05-1.25-1.83-3.2-2.08-3.89-2.11-1.66-.17-3.24.97-4.08.97-.85 0-2.15-.95-3.54-.92-1.82.03-3.5 1.06-4.44 2.69-1.89 3.28-.48 8.13 1.36 10.79.9 1.31 1.97 2.77 3.37 2.72 1.36-.06 1.87-.88 3.51-.88 1.64 0 2.1.88 3.53.85 1.46-.03 2.38-1.32 3.27-2.64 1.03-1.51 1.45-2.98 1.47-3.06-.03-.01-2.83-1.08-2.86-4.36zM14.36 4.27c.74-.9 1.24-2.15 1.1-3.39-1.07.04-2.36.71-3.13 1.6-.69.79-1.29 2.06-1.13 3.27 1.19.09 2.42-.6 3.16-1.48z"/></svg>
+  <span class="flex flex-col items-start leading-none">
+    <span class="text-[10px] tracking-wide opacity-80">Download on the</span>
+    <span class="mt-0.5 text-[17px] font-semibold tracking-tight">App Store</span>
+  </span>
+</a>
+<a href="/playstore" aria-label="Get it on Google Play" class="inline-flex h-12 items-center gap-3 rounded-full px-5 transition-all duration-300 will-change-transform hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 bg-white text-ink shadow-[0_1px_0_0_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.18)] hover:shadow-[0_1px_0_0_rgba(0,0,0,0.04),0_12px_28px_-12px_rgba(0,0,0,0.25)] focus-visible:ring-ink/30 focus-visible:ring-offset-cream">
+  <svg viewBox="0 0 24 24" class="size-7" aria-hidden="true">
+    <defs>
+      <linearGradient id="play-blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00C3FF"/><stop offset="100%" stop-color="#0064D5"/></linearGradient>
+      <linearGradient id="play-yellow" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FFD800"/><stop offset="100%" stop-color="#FF9900"/></linearGradient>
+      <linearGradient id="play-red" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FF4B4B"/><stop offset="100%" stop-color="#D6262C"/></linearGradient>
+      <linearGradient id="play-green" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#06EF7B"/><stop offset="100%" stop-color="#00B14F"/></linearGradient>
+    </defs>
+    <path d="M3.5 2.5C3.2 2.7 3 3.1 3 3.6v16.8c0 .5.2.9.5 1.1l9.4-9.5L3.5 2.5z" fill="url(#play-blue)"/>
+    <path d="M16.7 8.4 13.7 11l-9.8-9.9c.4-.2.9-.2 1.4.1L16.7 8.4z" fill="url(#play-green)"/>
+    <path d="M16.7 15.6 5.3 22.8c-.5.3-1 .3-1.4.1l9.8-9.9 3 2.6z" fill="url(#play-red)"/>
+    <path d="m16.7 8.4 4 2.4c.7.4.7 1.5 0 1.9l-4 2.4-3-2.6 3-2.1z" fill="url(#play-yellow)"/>
+  </svg>
+  <span class="flex flex-col items-start leading-none">
+    <span class="text-[10px] tracking-wide opacity-80 uppercase">Get it on</span>
+    <span class="mt-0.5 text-[17px] font-semibold tracking-tight">Google Play</span>
+  </span>
+</a>
+
+      </div>
+    </div>
+
+    <div data-reveal data-parallax style="--reveal-delay: 0.5s" class="mt-16 sm:mt-20 relative mx-auto aspect-[3/2] w-full max-w-4xl overflow-hidden rounded-3xl bg-fawn shadow-[0_30px_80px_-20px_rgba(0,0,0,0.18)]">
+      <div data-parallax-inner class="absolute inset-0 will-change-transform">
+        <img
+          src="/assets/img/hero-backstage.jpg"
+          alt="Backstage at a salon: a stylist mists product onto a model with hair clips, captured in soft warm light"
+          loading="eager"
+          fetchpriority="high"
+          class="absolute inset-0 size-full object-cover object-center scale-[1.3]"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENDORSED BY -->
+<section class="relative overflow-hidden bg-cream py-16 sm:py-20">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8">
+    <p class="eyebrow text-center text-charcoal-400">Endorsed by and seen in</p>
+  </div>
+  <div class="mt-10 relative overflow-hidden" style="mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);">
+    <div class="flex w-max animate-marquee">
+      <div class="flex shrink-0 items-center gap-6 pr-6">
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/tedx-sydney.webp" alt="TEDxSydney" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 transition-opacity duration-300 hover:opacity-100 invert" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-14 sm:h-16 -mt-1 sm:-mt-2"><img src="/assets/img/press/usyd-genesis.png" alt="The University of Sydney - Genesis" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 transition-opacity duration-300 hover:opacity-100" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/incubate.webp" alt="Incubate" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 transition-opacity duration-300 hover:opacity-100" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-9 sm:h-11"><img src="/assets/img/press/customer-show.png" alt="The Customer Show" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 transition-opacity duration-300 hover:opacity-100" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/inside-small-business.webp" alt="Inside Small Business" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 transition-opacity duration-300 hover:opacity-100" /></div>
+      </div>
+      <div aria-hidden="true" class="flex shrink-0 items-center gap-6 pr-6">
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/tedx-sydney.webp" alt="" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 invert" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-14 sm:h-16 -mt-1 sm:-mt-2"><img src="/assets/img/press/usyd-genesis.png" alt="" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/incubate.webp" alt="" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-9 sm:h-11"><img src="/assets/img/press/customer-show.png" alt="" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/inside-small-business.webp" alt="" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS (tabs) -->
+<section id="how-it-works" class="bg-cream py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8" data-tabs>
+    <div data-reveal>
+      <div class="flex flex-col items-start gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/[0.08] bg-white text-charcoal-700">How it works</span>
+          <h2 class="display mt-5 text-balance text-[clamp(2.25rem,5vw,3.75rem)]">Save, search and share beauty you can trust.</h2>
+        </div>
+        <p class="max-w-sm text-[15px] leading-relaxed text-charcoal-600">Three simple ways Bella helps you stop second-guessing your next appointment.</p>
+      </div>
+    </div>
+
+    <div data-reveal class="mt-12">
+      <div role="tablist" aria-label="How Bella works" class="flex flex-wrap items-center gap-2 rounded-full border border-ink/[0.08] bg-white/60 p-1.5 w-fit backdrop-blur-sm">
+        <button data-tab="discover" data-tone="peony" role="tab" aria-selected="true" class="relative inline-flex h-10 items-center rounded-full px-5 text-sm font-medium transition-colors duration-300 text-charcoal-500 hover:text-ink data-[active=true]:bg-peony data-[active=true]:text-ink data-[active=true]:shadow-[0_1px_0_0_rgba(255,255,255,0.6)_inset]">Discover</button>
+        <button data-tab="search" data-tone="butter" role="tab" aria-selected="false" class="relative inline-flex h-10 items-center rounded-full px-5 text-sm font-medium transition-colors duration-300 text-charcoal-500 hover:text-ink data-[active=true]:bg-butter data-[active=true]:text-ink data-[active=true]:shadow-[0_1px_0_0_rgba(255,255,255,0.6)_inset]">Search</button>
+        <button data-tab="manage" data-tone="cloud" role="tab" aria-selected="false" class="relative inline-flex h-10 items-center rounded-full px-5 text-sm font-medium transition-colors duration-300 text-charcoal-500 hover:text-ink data-[active=true]:bg-cloud-100 data-[active=true]:text-ink data-[active=true]:shadow-[0_1px_0_0_rgba(255,255,255,0.6)_inset]">Manage</button>
+      </div>
+    </div>
+
+    <div data-reveal class="mt-6">
+      <div data-tab-stage class="grain relative overflow-hidden rounded-3xl transition-colors duration-500" style="background-color: #FFD6DF">
+        <div data-tab-panel="discover" class="grid items-center gap-8 p-7 sm:p-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12 lg:p-14 min-h-[420px] sm:min-h-[480px]">
+          <div class="max-w-xl">
+            <span class="eyebrow text-cherry">Discover</span>
+            <h3 class="mt-5 font-display text-pretty text-[clamp(2rem,4vw,2.75rem)] leading-[1.05] tracking-tight">The recs your group chat keeps asking for.</h3>
+            <p class="mt-5 max-w-md text-[16px] leading-relaxed text-charcoal-700">See where your friends go, what they loved, and who they would actually book again.</p>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <div class="relative aspect-[9/19] w-[220px] sm:w-[260px] rounded-[2.6rem] bg-ink p-[10px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.45)]">
+              <div class="absolute left-1/2 top-2 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-ink"></div>
+              <div class="relative size-full overflow-hidden rounded-[2.05rem] bg-cream">
+                <img src="/assets/img/discover.PNG" alt="A creator post on Bella showing a balayage hair makeover" class="absolute inset-0 size-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-tab-panel="search" class="hidden items-center gap-8 p-7 sm:p-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12 lg:p-14 min-h-[420px] sm:min-h-[480px] grid">
+          <div class="max-w-xl">
+            <span class="eyebrow text-cherry">Search</span>
+            <h3 class="mt-5 font-display text-pretty text-[clamp(2rem,4vw,2.75rem)] leading-[1.05] tracking-tight">Search beauty the way you actually think.</h3>
+            <p class="mt-5 max-w-md text-[16px] leading-relaxed text-charcoal-700">Find the right salon by treatment, location, result or need - without scrolling through endless tabs.</p>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <div class="relative aspect-[9/19] w-[220px] sm:w-[260px] rounded-[2.6rem] bg-ink p-[10px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.45)]">
+              <div class="absolute left-1/2 top-2 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-ink"></div>
+              <div class="relative size-full overflow-hidden rounded-[2.05rem] bg-cream">
+                <img src="/assets/img/search.PNG" alt="A map view in Bella with salon pins around Paddington" class="absolute inset-0 size-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-tab-panel="manage" class="hidden items-center gap-8 p-7 sm:p-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12 lg:p-14 min-h-[420px] sm:min-h-[480px] grid">
+          <div class="max-w-xl">
+            <span class="eyebrow text-cherry">Manage</span>
+            <h3 class="mt-5 font-display text-pretty text-[clamp(2rem,4vw,2.75rem)] leading-[1.05] tracking-tight">Never lose a good beauty find again.</h3>
+            <p class="mt-5 max-w-md text-[16px] leading-relaxed text-charcoal-700">Save salons, notes, inspo and results, so every appointment gets easier to book next time.</p>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <div class="relative aspect-[9/19] w-[220px] sm:w-[260px] rounded-[2.6rem] bg-ink p-[10px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.45)]">
+              <div class="absolute left-1/2 top-2 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-ink"></div>
+              <div class="relative size-full overflow-hidden rounded-[2.05rem] bg-cream">
+                <img src="/assets/img/manage.PNG" alt="Bella's explore feed with bookmarked salons" class="absolute inset-0 size-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="bg-cream py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8">
+    <div data-reveal>
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/[0.08] bg-white text-charcoal-700">Features</span>
+        <h2 class="display mt-5 text-[clamp(2.25rem,5vw,3.75rem)] text-ink">Beauty, without the <span class="italic text-cherry">guesswork.</span></h2>
+        <p class="mt-5 max-w-xl text-[17px] leading-relaxed text-charcoal-600">Bella takes the difficulty out of finding, choosing and remembering beauty salons and products that you love.</p>
+      </div>
+    </div>
+
+    <div data-reveal class="mt-14">
+      <div class="grid gap-px overflow-hidden rounded-3xl bg-ink/[0.08] sm:grid-cols-3">
+        <article class="group h-full bg-cream p-7 sm:p-8 transition-colors hover:bg-white">
+          <div class="flex size-11 items-center justify-center rounded-full text-cherry bg-peony">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-5"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+          </div>
+          <h3 class="mt-7 font-display text-[24px] leading-[1.1] tracking-tight text-ink">Save time with Bella AI.</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-charcoal-600">Ask Bella for tailored salon and treatment suggestions, from a fresh blonde specialist to your next facial.</p>
+        </article>
+        <article class="group h-full bg-cream p-7 sm:p-8 transition-colors hover:bg-white">
+          <div class="flex size-11 items-center justify-center rounded-full text-cherry bg-butter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          </div>
+          <h3 class="mt-7 font-display text-[24px] leading-[1.1] tracking-tight text-ink">Find new beauty products.</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-charcoal-600">See inside your friends' beauty cabinets to discover their latest recommendations on haircare, skincare and makeup.</p>
+        </article>
+        <article class="group h-full bg-cream p-7 sm:p-8 transition-colors hover:bg-white">
+          <div class="flex size-11 items-center justify-center rounded-full text-cherry bg-cloud-100">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <h3 class="mt-7 font-display text-[24px] leading-[1.1] tracking-tight text-ink">Compare before you book.</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-charcoal-600">See services, photos, reviews, offers and real results in one place, so you can book with confidence.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="overflow-hidden bg-cream py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8">
+    <div data-reveal>
+      <div class="flex flex-col items-start gap-5 sm:items-center sm:text-center">
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/[0.08] bg-white text-charcoal-700">Love letters</span>
+        <h2 class="display max-w-3xl text-[clamp(2.25rem,5vw,3.75rem)]">The app beauty lovers <span class="italic text-cherry">love.</span></h2>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal class="mt-16 relative overflow-hidden" style="mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);">
+    <div class="flex w-max animate-marquee">
+      <div class="flex shrink-0 items-center gap-6 pr-6">
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8">
+          <blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;It can be hard to find a good salon if you aren't sure what you want, or if you have a specific request. Bella makes it much easier.&rdquo;</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Emma.png" alt="Emma T." class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Emma T.</p><p class="text-xs text-charcoal-400">Paddington, NSW</p></div></figcaption>
+        </figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8">
+          <blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;I love how Bella connects you with local salons! I've already found salons through the Bella Instagram that I never knew existed. The stylist was amazing, and I'll be back for sure.&rdquo;</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Ally.png" alt="Ally F." class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Ally F.</p><p class="text-xs text-charcoal-400">Mosman, NSW</p></div></figcaption>
+        </figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8">
+          <blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;Seeing recommendations based on my preferences and from my real-life friends is a game-changer. Thanks Bella!&rdquo;</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Arianna.png" alt="Arianna K." class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Arianna K.</p><p class="text-xs text-charcoal-400">Elizabeth Bay, NSW</p></div></figcaption>
+        </figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8">
+          <blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;As someone who's super picky about where I get services done, Bella has already been a lifesaver. As a test user, I was able to find a fantastic lash tech who really listened to what I wanted.&rdquo;</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Amelia.png" alt="Amelia C." class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Amelia C.</p><p class="text-xs text-charcoal-400">Lane Cove, NSW</p></div></figcaption>
+        </figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8">
+          <blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;I feel like I have insider access to the best places around, made even better because the test app was so easy to navigate.&rdquo;</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Naomi.png" alt="Naomi C." class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Naomi C.</p><p class="text-xs text-charcoal-400">Balmain, NSW</p></div></figcaption>
+        </figure>
+      </div>
+      <div aria-hidden="true" class="flex shrink-0 items-center gap-6 pr-6">
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8"><blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;It can be hard to find a good salon if you aren't sure what you want, or if you have a specific request. Bella makes it much easier.&rdquo;</blockquote><figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Emma.png" alt="" class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Emma T.</p><p class="text-xs text-charcoal-400">Paddington, NSW</p></div></figcaption></figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8"><blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;I love how Bella connects you with local salons!&rdquo;</blockquote><figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Ally.png" alt="" class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Ally F.</p><p class="text-xs text-charcoal-400">Mosman, NSW</p></div></figcaption></figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8"><blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;Seeing recommendations based on my preferences and from my real-life friends is a game-changer.&rdquo;</blockquote><figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Arianna.png" alt="" class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Arianna K.</p><p class="text-xs text-charcoal-400">Elizabeth Bay, NSW</p></div></figcaption></figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8"><blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;As someone who's super picky about where I get services done, Bella has already been a lifesaver.&rdquo;</blockquote><figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Amelia.png" alt="" class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Amelia C.</p><p class="text-xs text-charcoal-400">Lane Cove, NSW</p></div></figcaption></figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8"><blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;I feel like I have insider access to the best places around.&rdquo;</blockquote><figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Naomi.png" alt="" class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Naomi C.</p><p class="text-xs text-charcoal-400">Balmain, NSW</p></div></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG TEASER -->
+<section class="bg-cream py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8">
+    <div data-reveal>
+      <div class="flex items-end justify-between gap-6">
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/[0.08] bg-white text-charcoal-700">Journal</span>
+          <h2 class="display mt-5 text-[clamp(2.25rem,5vw,3.75rem)]">From our beauty blog.</h2>
+        </div>
+        <a href="/blog" class="group hidden sm:inline-flex items-center gap-1.5 text-[15px] font-medium text-ink hover:text-cherry">
+          More articles
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div data-reveal-stagger class="mt-12 grid gap-6 md:grid-cols-3">
+      <a data-reveal-item href="/blog/how-rent-a-chair-is-changing-the-game-with-muse-avenue/" class="group block">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-peony">
+          <img src="/assets/img/blog-salon-culture.jpg" alt="Black-and-white close-up of hands braiding long dark hair from behind" class="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
+          <div class="absolute inset-0 flex items-end p-6">
+            <span class="eyebrow inline-flex rounded-full bg-white/85 px-2.5 py-1 text-cherry backdrop-blur-sm">Learn</span>
+          </div>
+        </div>
+        <h3 class="mt-5 font-display text-[24px] leading-[1.15] tracking-tight transition-colors group-hover:text-cherry">The Future of Hair &amp; Beauty: How Rent-a-Chair is Changing the Game</h3>
+      </a>
+      <a data-reveal-item href="/blog/baby-botox-review/" class="group block">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-butter">
+          <img src="/assets/img/blog-skincare.jpg" alt="Close-up portrait of a woman with a hydrating eye patch under one eye" class="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
+          <div class="absolute inset-0 flex items-end p-6">
+            <span class="eyebrow inline-flex rounded-full bg-white/85 px-2.5 py-1 text-cherry backdrop-blur-sm">Trends</span>
+          </div>
+        </div>
+        <h3 class="mt-5 font-display text-[24px] leading-[1.15] tracking-tight transition-colors group-hover:text-cherry">'Baby Botox' - a good or bad idea?</h3>
+      </a>
+      <a data-reveal-item href="/blog/top-rated-nail-salons-near-paddington/" class="group block">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-cloud-100">
+          <img src="/assets/img/blog-nails.jpg" alt="Mint-green almond nails holding a dark cherry" class="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
+          <div class="absolute inset-0 flex items-end p-6">
+            <span class="eyebrow inline-flex rounded-full bg-white/85 px-2.5 py-1 text-cherry backdrop-blur-sm">Curated</span>
+          </div>
+        </div>
+        <h3 class="mt-5 font-display text-[24px] leading-[1.15] tracking-tight transition-colors group-hover:text-cherry">Top rated nail salons near Paddington</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="bg-cream py-24 sm:py-32">
+  <div class="mx-auto max-w-4xl px-6 sm:px-8">
+    <div data-reveal>
+      <div class="text-center">
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/[0.08] bg-white text-charcoal-700">FAQ</span>
+        <h2 class="display mt-5 text-[clamp(2.25rem,5vw,3.75rem)]">Still wondering? Start here.</h2>
+      </div>
+    </div>
+
+    <div data-reveal class="mt-14">
+      <div data-faq class="divide-y divide-ink/[0.08] border-y border-ink/[0.08]">
+        <div class="faq-item">
+          <button type="button" aria-expanded="false" class="flex w-full items-center justify-between gap-6 py-6 text-left">
+            <span class="font-display text-2xl sm:text-[28px] leading-tight tracking-tight text-ink">What services are on Bella?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-panel"><div class="pb-6 pr-12 text-[17px] leading-relaxed text-charcoal-600">All of your usual beauty services are now in one place - eyebrows, hair, makeup, waxing, laser, facials, eyelashes and more. If a local salon offers it, you'll find it on Bella.</div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" aria-expanded="false" class="flex w-full items-center justify-between gap-6 py-6 text-left">
+            <span class="font-display text-2xl sm:text-[28px] leading-tight tracking-tight text-ink">Who is Bella for?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-panel"><div class="pb-6 pr-12 text-[17px] leading-relaxed text-charcoal-600">Bella is for anyone who loves beauty. Whether you're hunting for a new colourist, a brow specialist or just want to see what your friends are raving about - Bella's for you.</div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" aria-expanded="false" class="flex w-full items-center justify-between gap-6 py-6 text-left">
+            <span class="font-display text-2xl sm:text-[28px] leading-tight tracking-tight text-ink">Can I only find and recommend well-known salons?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-panel"><div class="pb-6 pr-12 text-[17px] leading-relaxed text-charcoal-600">Not at all. Bella is built to surface the best beauty in every neighbourhood - from big household names to the hidden gems or freelancers that are being quietly raved about.</div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" aria-expanded="false" class="flex w-full items-center justify-between gap-6 py-6 text-left">
+            <span class="font-display text-2xl sm:text-[28px] leading-tight tracking-tight text-ink">I'm a salon and I'm interested, where can I get more info?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-panel"><div class="pb-6 pr-12 text-[17px] leading-relaxed text-charcoal-600">Head to <a href="/business" class="underline decoration-ink/20 underline-offset-4 hover:decoration-ink">our salon page</a> to see how Bella helps you reach more clients, share offers and grow - or email us at <a href="mailto:hello@bellaapp.au" class="underline decoration-ink/20 underline-offset-4 hover:decoration-ink">hello@bellaapp.au</a>.</div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" aria-expanded="false" class="flex w-full items-center justify-between gap-6 py-6 text-left">
+            <span class="font-display text-2xl sm:text-[28px] leading-tight tracking-tight text-ink">When can I download?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-panel"><div class="pb-6 pr-12 text-[17px] leading-relaxed text-charcoal-600">Bella is live now on iOS. <a href="https://apple.co/3ThFSL2" target="_blank" rel="noopener noreferrer" class="underline decoration-ink/20 underline-offset-4 hover:decoration-ink">Download from the App Store</a> and create your profile in under a minute.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-10 text-center text-[15px] text-charcoal-600">Need something else? <a href="/contact" class="text-cherry underline-offset-4 hover:underline">Contact our team</a>.</p>
+  </div>
+</section>
+
+<!-- OUTRO -->
+<section class="relative isolate overflow-hidden bg-bubblegum text-white">
+  <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_70%_30%,rgba(255,255,255,0.18)_0%,transparent_70%)]"></div>
+  <div class="grain pointer-events-none absolute inset-0 -z-10 opacity-50"></div>
+
+  <img src="/assets/img/star-butter.png" alt="" aria-hidden="true" class="pointer-events-none absolute right-[8%] top-[10%] z-0 size-8 sm:size-10 lg:right-[14%] animate-twinkle drop-shadow-[0_8px_20px_rgba(0,0,0,0.15)]" />
+
+  <div class="relative mx-auto w-full max-w-6xl px-6 sm:px-8 pt-20 sm:pt-24 pb-10">
+    <div class="grid items-start gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
+      <div class="relative">
+        <p class="eyebrow text-white/70">Your invitation</p>
+        <h2 data-reveal class="display mt-6 text-[clamp(2.5rem,6vw,4.5rem)]">
+          <span class="block text-white">Ready to</span>
+          <span class="block text-butter">upgrade your</span>
+          <span class="block text-white">beauty routine?</span>
+        </h2>
+        <p class="mt-8 font-sans text-lg sm:text-xl font-light tracking-tight text-white">See you inside.</p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="https://apple.co/3ThFSL2" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" class="inline-flex h-12 items-center gap-3 rounded-full px-5 transition-all duration-300 will-change-transform hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 bg-white text-ink shadow-[0_1px_0_0_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.18)] hover:shadow-[0_1px_0_0_rgba(0,0,0,0.04),0_12px_28px_-12px_rgba(0,0,0,0.25)] focus-visible:ring-ink/30 focus-visible:ring-offset-cream">
+  <svg viewBox="0 0 24 24" class="size-7" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.69 2.2-3.99 2.3-4.05-1.25-1.83-3.2-2.08-3.89-2.11-1.66-.17-3.24.97-4.08.97-.85 0-2.15-.95-3.54-.92-1.82.03-3.5 1.06-4.44 2.69-1.89 3.28-.48 8.13 1.36 10.79.9 1.31 1.97 2.77 3.37 2.72 1.36-.06 1.87-.88 3.51-.88 1.64 0 2.1.88 3.53.85 1.46-.03 2.38-1.32 3.27-2.64 1.03-1.51 1.45-2.98 1.47-3.06-.03-.01-2.83-1.08-2.86-4.36zM14.36 4.27c.74-.9 1.24-2.15 1.1-3.39-1.07.04-2.36.71-3.13 1.6-.69.79-1.29 2.06-1.13 3.27 1.19.09 2.42-.6 3.16-1.48z"/></svg>
+  <span class="flex flex-col items-start leading-none">
+    <span class="text-[10px] tracking-wide opacity-80">Download on the</span>
+    <span class="mt-0.5 text-[17px] font-semibold tracking-tight">App Store</span>
+  </span>
+</a>
+<a href="/playstore" aria-label="Get it on Google Play" class="inline-flex h-12 items-center gap-3 rounded-full px-5 transition-all duration-300 will-change-transform hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 bg-white text-ink shadow-[0_1px_0_0_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.18)] hover:shadow-[0_1px_0_0_rgba(0,0,0,0.04),0_12px_28px_-12px_rgba(0,0,0,0.25)] focus-visible:ring-ink/30 focus-visible:ring-offset-cream">
+  <svg viewBox="0 0 24 24" class="size-7" aria-hidden="true">
+    <defs>
+      <linearGradient id="play-blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00C3FF"/><stop offset="100%" stop-color="#0064D5"/></linearGradient>
+      <linearGradient id="play-yellow" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FFD800"/><stop offset="100%" stop-color="#FF9900"/></linearGradient>
+      <linearGradient id="play-red" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FF4B4B"/><stop offset="100%" stop-color="#D6262C"/></linearGradient>
+      <linearGradient id="play-green" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#06EF7B"/><stop offset="100%" stop-color="#00B14F"/></linearGradient>
+    </defs>
+    <path d="M3.5 2.5C3.2 2.7 3 3.1 3 3.6v16.8c0 .5.2.9.5 1.1l9.4-9.5L3.5 2.5z" fill="url(#play-blue)"/>
+    <path d="M16.7 8.4 13.7 11l-9.8-9.9c.4-.2.9-.2 1.4.1L16.7 8.4z" fill="url(#play-green)"/>
+    <path d="M16.7 15.6 5.3 22.8c-.5.3-1 .3-1.4.1l9.8-9.9 3 2.6z" fill="url(#play-red)"/>
+    <path d="m16.7 8.4 4 2.4c.7.4.7 1.5 0 1.9l-4 2.4-3-2.6 3-2.1z" fill="url(#play-yellow)"/>
+  </svg>
+  <span class="flex flex-col items-start leading-none">
+    <span class="text-[10px] tracking-wide opacity-80 uppercase">Get it on</span>
+    <span class="mt-0.5 text-[17px] font-semibold tracking-tight">Google Play</span>
+  </span>
+</a>
+
+        </div>
+      </div>
+
+      <div data-reveal style="--reveal-delay: 0.2s" class="relative mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-3xl bg-fawn shadow-[0_30px_80px_-20px_rgba(0,0,0,0.35)] rotate-[2.5deg]">
+          <img src="/assets/img/outro-bedroom.jpg" alt="A woman lying on a bed with vintage curlers in her hair, looking at her phone in warm afternoon light" class="absolute inset-0 size-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="relative mt-8 sm:mt-12 border-y border-white/15 py-4 sm:py-5 overflow-hidden">
+    <div class="flex w-max animate-marquee">
+      <div class="flex shrink-0 items-center gap-6 pr-6">
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">@joinbella.au</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">real recs, real women, real results</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">@joinbella.au</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">real recs, real women, real results</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+      </div>
+      <div aria-hidden="true" class="flex shrink-0 items-center gap-6 pr-6">
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">@joinbella.au</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">real recs, real women, real results</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">@joinbella.au</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">real recs, real women, real results</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="mt-24 border-t border-ink/[0.07] bg-cream">
+  <div class="mx-auto max-w-7xl px-6 sm:px-8 py-16">
+    <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+      <div class="max-w-sm">
+        <a href="/" aria-label="Bella home" class="inline-flex items-center">
+          <img src="/assets/bella-logo.png" alt="Bella" class="h-7 sm:h-8 w-auto" />
+        </a>
+        <p class="eyebrow mt-5 text-charcoal-400">Made with love · Sydney, AU</p>
+        <div class="mt-6 flex items-center gap-2">
+          <a href="https://www.instagram.com/joinbella.au/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex size-9 items-center justify-center rounded-full border border-ink/10 text-charcoal-600 hover:border-ink/20 hover:text-ink transition-colors">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@bellaapp.au" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="inline-flex size-9 items-center justify-center rounded-full border border-ink/10 text-charcoal-600 hover:border-ink/20 hover:text-ink transition-colors">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="size-4" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.79a8.16 8.16 0 0 0 4.77 1.52V6.86a4.85 4.85 0 0 1-1.84-.17z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/bellaapp/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex size-9 items-center justify-center rounded-full border border-ink/10 text-charcoal-600 hover:border-ink/20 hover:text-ink transition-colors">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="eyebrow text-charcoal-400">Beauty lovers</h4>
+        <ul class="mt-5 space-y-3">
+          <li><a href="/" class="text-[15px] text-ink/80 hover:text-ink">Home</a></li>
+          <li><a href="/#features" class="text-[15px] text-ink/80 hover:text-ink">Features</a></li>
+          <li><a href="/#how-it-works" class="text-[15px] text-ink/80 hover:text-ink">How it works</a></li>
+          <li><a href="/#faq" class="text-[15px] text-ink/80 hover:text-ink">FAQ</a></li>
+          <li><a href="https://apple.co/3ThFSL2" target="_blank" rel="noopener noreferrer" class="text-[15px] text-ink/80 hover:text-ink">Download</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="eyebrow text-charcoal-400">Salons</h4>
+        <ul class="mt-5 space-y-3">
+          <li><a href="/business" class="text-[15px] text-ink/80 hover:text-ink">For salons</a></li>
+          <li><a href="/business#how-it-works" class="text-[15px] text-ink/80 hover:text-ink">How it works</a></li>
+          <li><a href="/business#faq" class="text-[15px] text-ink/80 hover:text-ink">FAQ</a></li>
+          <li><a href="https://salons.bellaapp.au/" target="_blank" rel="noopener noreferrer" class="text-[15px] text-ink/80 hover:text-ink">Salon login</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="eyebrow text-charcoal-400">Company</h4>
+        <ul class="mt-5 space-y-3">
+          <li><a href="/blog" class="text-[15px] text-ink/80 hover:text-ink">Blog</a></li>
+          <li><a href="/contact" class="text-[15px] text-ink/80 hover:text-ink">Contact</a></li>
+          <li><a href="/privacy" class="text-[15px] text-ink/80 hover:text-ink">Privacy</a></li>
+          <li><a href="/web-terms" class="text-[15px] text-ink/80 hover:text-ink">Web terms</a></li>
+          <li><a href="/app-terms" class="text-[15px] text-ink/80 hover:text-ink">App terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-col-reverse items-start justify-between gap-4 border-t border-ink/[0.07] pt-6 sm:flex-row sm:items-center">
+      <p class="text-xs text-charcoal-400">© 2026 Bella App Pty Ltd. All rights reserved.</p>
+      <a href="mailto:hello@bellaapp.au" class="text-xs text-charcoal-600 hover:text-ink">hello@bellaapp.au</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Global JS, used by every page. Form-specific JS is loaded only on
+     pages that have those forms (contact.html, playstore.html). -->
+<script type="module" src="/assets/js/nav.js"></script>
+<script type="module" src="/assets/js/reveal.js"></script>
+<script type="module" src="/assets/js/faq.js"></script>
+<script type="module" src="/assets/js/tabs.js"></script>
+<script type="module" src="/assets/js/parallax.js"></script>
+
+</body>
+</html>
+

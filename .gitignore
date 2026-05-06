@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+
+# The compiled Tailwind output is committed (so GitHub Pages can serve it
+# without a build step). Comment this out if you'd rather rebuild via a GH
+# Action and gitignore the output.
+# assets/css/styles.css

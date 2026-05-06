@@ -1,0 +1,51 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{title}}</title>
+<meta name="description" content="{{description}}" />
+<link rel="canonical" href="{{canonical}}" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="{{title}}" />
+<meta property="og:description" content="{{description}}" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Bella App" />
+<meta property="og:url" content="{{canonical}}" />
+<meta property="og:image" content="{{siteUrl}}{{ogImage}}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{title}}" />
+<meta name="twitter:description" content="{{description}}" />
+<meta name="twitter:image" content="{{siteUrl}}{{ogImage}}" />
+
+<!-- Favicon: the bubblegum-cherry brandmark star. -->
+<link rel="icon" type="image/png" href="/assets/bella-star.png" />
+<link rel="apple-touch-icon" href="/assets/bella-star.png" />
+
+<!-- Fonts: Inter (sans) and Instrument Serif (display). -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+/>
+
+<!-- Compiled Tailwind output. Built by `npm run build:css`. -->
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<!-- Organization schema. Google uses this to build the brand entity that
+     appears in the right-side Knowledge Panel and other rich results. The
+     `logo` URL points at the wordmark; the favicon (star) is set above and
+     handled separately by Google as the search-result favicon. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bella App",
+  "url": "https://bellaapp.au",
+  "logo": "https://bellaapp.au/assets/bella-wordmark.png",
+  "sameAs": [
+    "https://www.instagram.com/joinbella.au/",
+    "https://www.tiktok.com/@bellaapp.au",
+    "https://www.linkedin.com/company/bellaapp/"
+  ]
+}
+</script>

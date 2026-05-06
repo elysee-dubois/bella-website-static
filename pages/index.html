@@ -1,0 +1,391 @@
+<!-- meta title:  | description: Your ultimate beauty app. Find salons you can trust. See where your friends are visiting and loving, so you can book your next appointment with confidence. | path: / | active: home | audience: consumer -->
+{{> layout-start}}
+
+<!-- HERO -->
+<section class="relative overflow-hidden bg-cream pt-12 sm:pt-16 lg:pt-24 pb-20 sm:pb-28">
+  <div class="absolute inset-x-0 top-0 -z-10 h-[640px] bg-[radial-gradient(60%_60%_at_50%_0%,rgba(255,214,223,0.55)_0%,rgba(251,248,244,0)_70%)]"></div>
+  <div class="mx-auto w-full max-w-6xl px-6 sm:px-8">
+    <div class="flex flex-col items-center text-center">
+      <div data-reveal>
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/15 bg-white text-ink">
+          <span class="relative inline-flex size-1.5">
+            <span class="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75 animate-ping"></span>
+            <span class="relative inline-flex size-1.5 rounded-full bg-emerald-500"></span>
+          </span>
+          Now Live
+        </span>
+      </div>
+
+      <h1 data-reveal style="--reveal-delay: 0.1s" class="display mt-7 max-w-4xl text-balance text-[clamp(3.75rem,7vw,5.75rem)] text-ink">
+        <span>The future of beauty </span>
+        <br class="hidden sm:block" />
+        <span>feels like a </span>
+        <span class="italic text-cherry">dream.</span>
+      </h1>
+
+      <p data-reveal style="--reveal-delay: 0.25s" class="mt-7 max-w-xl text-balance text-lg leading-relaxed text-charcoal-600">
+        Beauty decisions, made easier. Discover trusted recs, real results, expert advice and local offers - all on Bella.
+      </p>
+
+      <div data-reveal style="--reveal-delay: 0.4s" class="mt-9 flex flex-wrap items-center justify-center gap-3">
+        {{> store-badges}}
+      </div>
+    </div>
+
+    <div data-reveal data-parallax style="--reveal-delay: 0.5s" class="mt-16 sm:mt-20 relative mx-auto aspect-[3/2] w-full max-w-4xl overflow-hidden rounded-3xl bg-fawn shadow-[0_30px_80px_-20px_rgba(0,0,0,0.18)]">
+      <div data-parallax-inner class="absolute inset-0 will-change-transform">
+        <img
+          src="/assets/img/hero-backstage.jpg"
+          alt="Backstage at a salon: a stylist mists product onto a model with hair clips, captured in soft warm light"
+          loading="eager"
+          fetchpriority="high"
+          class="absolute inset-0 size-full object-cover object-center scale-[1.3]"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENDORSED BY -->
+<section class="relative overflow-hidden bg-cream py-16 sm:py-20">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8">
+    <p class="eyebrow text-center text-charcoal-400">Endorsed by and seen in</p>
+  </div>
+  <div class="mt-10 relative overflow-hidden" style="mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);">
+    <div class="flex w-max animate-marquee">
+      <div class="flex shrink-0 items-center gap-6 pr-6">
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/tedx-sydney.webp" alt="TEDxSydney" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 transition-opacity duration-300 hover:opacity-100 invert" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-14 sm:h-16 -mt-1 sm:-mt-2"><img src="/assets/img/press/usyd-genesis.png" alt="The University of Sydney - Genesis" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 transition-opacity duration-300 hover:opacity-100" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/incubate.webp" alt="Incubate" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 transition-opacity duration-300 hover:opacity-100" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-9 sm:h-11"><img src="/assets/img/press/customer-show.png" alt="The Customer Show" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 transition-opacity duration-300 hover:opacity-100" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/inside-small-business.webp" alt="Inside Small Business" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 transition-opacity duration-300 hover:opacity-100" /></div>
+      </div>
+      <div aria-hidden="true" class="flex shrink-0 items-center gap-6 pr-6">
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/tedx-sydney.webp" alt="" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55 invert" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-14 sm:h-16 -mt-1 sm:-mt-2"><img src="/assets/img/press/usyd-genesis.png" alt="" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/incubate.webp" alt="" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-9 sm:h-11"><img src="/assets/img/press/customer-show.png" alt="" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55" /></div>
+        <div class="flex shrink-0 items-center px-6 sm:px-10 h-7 sm:h-9"><img src="/assets/img/press/inside-small-business.webp" alt="" class="h-full w-auto object-contain mix-blend-multiply grayscale opacity-55" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS (tabs) -->
+<section id="how-it-works" class="bg-cream py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8" data-tabs>
+    <div data-reveal>
+      <div class="flex flex-col items-start gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/[0.08] bg-white text-charcoal-700">How it works</span>
+          <h2 class="display mt-5 text-balance text-[clamp(2.25rem,5vw,3.75rem)]">Save, search and share beauty you can trust.</h2>
+        </div>
+        <p class="max-w-sm text-[15px] leading-relaxed text-charcoal-600">Three simple ways Bella helps you stop second-guessing your next appointment.</p>
+      </div>
+    </div>
+
+    <div data-reveal class="mt-12">
+      <div role="tablist" aria-label="How Bella works" class="flex flex-wrap items-center gap-2 rounded-full border border-ink/[0.08] bg-white/60 p-1.5 w-fit backdrop-blur-sm">
+        <button data-tab="discover" data-tone="peony" role="tab" aria-selected="true" class="relative inline-flex h-10 items-center rounded-full px-5 text-sm font-medium transition-colors duration-300 text-charcoal-500 hover:text-ink data-[active=true]:bg-peony data-[active=true]:text-ink data-[active=true]:shadow-[0_1px_0_0_rgba(255,255,255,0.6)_inset]">Discover</button>
+        <button data-tab="search" data-tone="butter" role="tab" aria-selected="false" class="relative inline-flex h-10 items-center rounded-full px-5 text-sm font-medium transition-colors duration-300 text-charcoal-500 hover:text-ink data-[active=true]:bg-butter data-[active=true]:text-ink data-[active=true]:shadow-[0_1px_0_0_rgba(255,255,255,0.6)_inset]">Search</button>
+        <button data-tab="manage" data-tone="cloud" role="tab" aria-selected="false" class="relative inline-flex h-10 items-center rounded-full px-5 text-sm font-medium transition-colors duration-300 text-charcoal-500 hover:text-ink data-[active=true]:bg-cloud-100 data-[active=true]:text-ink data-[active=true]:shadow-[0_1px_0_0_rgba(255,255,255,0.6)_inset]">Manage</button>
+      </div>
+    </div>
+
+    <div data-reveal class="mt-6">
+      <div data-tab-stage class="grain relative overflow-hidden rounded-3xl transition-colors duration-500" style="background-color: #FFD6DF">
+        <div data-tab-panel="discover" class="grid items-center gap-8 p-7 sm:p-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12 lg:p-14 min-h-[420px] sm:min-h-[480px]">
+          <div class="max-w-xl">
+            <span class="eyebrow text-cherry">Discover</span>
+            <h3 class="mt-5 font-display text-pretty text-[clamp(2rem,4vw,2.75rem)] leading-[1.05] tracking-tight">The recs your group chat keeps asking for.</h3>
+            <p class="mt-5 max-w-md text-[16px] leading-relaxed text-charcoal-700">See where your friends go, what they loved, and who they would actually book again.</p>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <div class="relative aspect-[9/19] w-[220px] sm:w-[260px] rounded-[2.6rem] bg-ink p-[10px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.45)]">
+              <div class="absolute left-1/2 top-2 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-ink"></div>
+              <div class="relative size-full overflow-hidden rounded-[2.05rem] bg-cream">
+                <img src="/assets/img/discover.PNG" alt="A creator post on Bella showing a balayage hair makeover" class="absolute inset-0 size-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-tab-panel="search" class="hidden items-center gap-8 p-7 sm:p-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12 lg:p-14 min-h-[420px] sm:min-h-[480px] grid">
+          <div class="max-w-xl">
+            <span class="eyebrow text-cherry">Search</span>
+            <h3 class="mt-5 font-display text-pretty text-[clamp(2rem,4vw,2.75rem)] leading-[1.05] tracking-tight">Search beauty the way you actually think.</h3>
+            <p class="mt-5 max-w-md text-[16px] leading-relaxed text-charcoal-700">Find the right salon by treatment, location, result or need - without scrolling through endless tabs.</p>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <div class="relative aspect-[9/19] w-[220px] sm:w-[260px] rounded-[2.6rem] bg-ink p-[10px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.45)]">
+              <div class="absolute left-1/2 top-2 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-ink"></div>
+              <div class="relative size-full overflow-hidden rounded-[2.05rem] bg-cream">
+                <img src="/assets/img/search.PNG" alt="A map view in Bella with salon pins around Paddington" class="absolute inset-0 size-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-tab-panel="manage" class="hidden items-center gap-8 p-7 sm:p-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12 lg:p-14 min-h-[420px] sm:min-h-[480px] grid">
+          <div class="max-w-xl">
+            <span class="eyebrow text-cherry">Manage</span>
+            <h3 class="mt-5 font-display text-pretty text-[clamp(2rem,4vw,2.75rem)] leading-[1.05] tracking-tight">Never lose a good beauty find again.</h3>
+            <p class="mt-5 max-w-md text-[16px] leading-relaxed text-charcoal-700">Save salons, notes, inspo and results, so every appointment gets easier to book next time.</p>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <div class="relative aspect-[9/19] w-[220px] sm:w-[260px] rounded-[2.6rem] bg-ink p-[10px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.45)]">
+              <div class="absolute left-1/2 top-2 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-ink"></div>
+              <div class="relative size-full overflow-hidden rounded-[2.05rem] bg-cream">
+                <img src="/assets/img/manage.PNG" alt="Bella's explore feed with bookmarked salons" class="absolute inset-0 size-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="bg-cream py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8">
+    <div data-reveal>
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/[0.08] bg-white text-charcoal-700">Features</span>
+        <h2 class="display mt-5 text-[clamp(2.25rem,5vw,3.75rem)] text-ink">Beauty, without the <span class="italic text-cherry">guesswork.</span></h2>
+        <p class="mt-5 max-w-xl text-[17px] leading-relaxed text-charcoal-600">Bella takes the difficulty out of finding, choosing and remembering beauty salons and products that you love.</p>
+      </div>
+    </div>
+
+    <div data-reveal class="mt-14">
+      <div class="grid gap-px overflow-hidden rounded-3xl bg-ink/[0.08] sm:grid-cols-3">
+        <article class="group h-full bg-cream p-7 sm:p-8 transition-colors hover:bg-white">
+          <div class="flex size-11 items-center justify-center rounded-full text-cherry bg-peony">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-5"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+          </div>
+          <h3 class="mt-7 font-display text-[24px] leading-[1.1] tracking-tight text-ink">Save time with Bella AI.</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-charcoal-600">Ask Bella for tailored salon and treatment suggestions, from a fresh blonde specialist to your next facial.</p>
+        </article>
+        <article class="group h-full bg-cream p-7 sm:p-8 transition-colors hover:bg-white">
+          <div class="flex size-11 items-center justify-center rounded-full text-cherry bg-butter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          </div>
+          <h3 class="mt-7 font-display text-[24px] leading-[1.1] tracking-tight text-ink">Find new beauty products.</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-charcoal-600">See inside your friends' beauty cabinets to discover their latest recommendations on haircare, skincare and makeup.</p>
+        </article>
+        <article class="group h-full bg-cream p-7 sm:p-8 transition-colors hover:bg-white">
+          <div class="flex size-11 items-center justify-center rounded-full text-cherry bg-cloud-100">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <h3 class="mt-7 font-display text-[24px] leading-[1.1] tracking-tight text-ink">Compare before you book.</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-charcoal-600">See services, photos, reviews, offers and real results in one place, so you can book with confidence.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="overflow-hidden bg-cream py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8">
+    <div data-reveal>
+      <div class="flex flex-col items-start gap-5 sm:items-center sm:text-center">
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/[0.08] bg-white text-charcoal-700">Love letters</span>
+        <h2 class="display max-w-3xl text-[clamp(2.25rem,5vw,3.75rem)]">The app beauty lovers <span class="italic text-cherry">love.</span></h2>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal class="mt-16 relative overflow-hidden" style="mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);">
+    <div class="flex w-max animate-marquee">
+      <div class="flex shrink-0 items-center gap-6 pr-6">
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8">
+          <blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;It can be hard to find a good salon if you aren't sure what you want, or if you have a specific request. Bella makes it much easier.&rdquo;</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Emma.png" alt="Emma T." class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Emma T.</p><p class="text-xs text-charcoal-400">Paddington, NSW</p></div></figcaption>
+        </figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8">
+          <blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;I love how Bella connects you with local salons! I've already found salons through the Bella Instagram that I never knew existed. The stylist was amazing, and I'll be back for sure.&rdquo;</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Ally.png" alt="Ally F." class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Ally F.</p><p class="text-xs text-charcoal-400">Mosman, NSW</p></div></figcaption>
+        </figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8">
+          <blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;Seeing recommendations based on my preferences and from my real-life friends is a game-changer. Thanks Bella!&rdquo;</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Arianna.png" alt="Arianna K." class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Arianna K.</p><p class="text-xs text-charcoal-400">Elizabeth Bay, NSW</p></div></figcaption>
+        </figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8">
+          <blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;As someone who's super picky about where I get services done, Bella has already been a lifesaver. As a test user, I was able to find a fantastic lash tech who really listened to what I wanted.&rdquo;</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Amelia.png" alt="Amelia C." class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Amelia C.</p><p class="text-xs text-charcoal-400">Lane Cove, NSW</p></div></figcaption>
+        </figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8">
+          <blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;I feel like I have insider access to the best places around, made even better because the test app was so easy to navigate.&rdquo;</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Naomi.png" alt="Naomi C." class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Naomi C.</p><p class="text-xs text-charcoal-400">Balmain, NSW</p></div></figcaption>
+        </figure>
+      </div>
+      <div aria-hidden="true" class="flex shrink-0 items-center gap-6 pr-6">
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8"><blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;It can be hard to find a good salon if you aren't sure what you want, or if you have a specific request. Bella makes it much easier.&rdquo;</blockquote><figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Emma.png" alt="" class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Emma T.</p><p class="text-xs text-charcoal-400">Paddington, NSW</p></div></figcaption></figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8"><blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;I love how Bella connects you with local salons!&rdquo;</blockquote><figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Ally.png" alt="" class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Ally F.</p><p class="text-xs text-charcoal-400">Mosman, NSW</p></div></figcaption></figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8"><blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;Seeing recommendations based on my preferences and from my real-life friends is a game-changer.&rdquo;</blockquote><figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Arianna.png" alt="" class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Arianna K.</p><p class="text-xs text-charcoal-400">Elizabeth Bay, NSW</p></div></figcaption></figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8"><blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;As someone who's super picky about where I get services done, Bella has already been a lifesaver.&rdquo;</blockquote><figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Amelia.png" alt="" class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Amelia C.</p><p class="text-xs text-charcoal-400">Lane Cove, NSW</p></div></figcaption></figure>
+        <figure class="w-[360px] sm:w-[420px] shrink-0 rounded-3xl border border-ink/[0.07] bg-white p-7 sm:p-8"><blockquote class="font-display text-[22px] leading-[1.25] text-ink">&ldquo;I feel like I have insider access to the best places around.&rdquo;</blockquote><figcaption class="mt-6 flex items-center gap-3"><div class="relative size-10 overflow-hidden rounded-full ring-1 ring-ink/[0.06]"><img src="/assets/img/Naomi.png" alt="" class="absolute inset-0 size-full object-cover" /></div><div><p class="text-sm font-medium text-ink">Naomi C.</p><p class="text-xs text-charcoal-400">Balmain, NSW</p></div></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG TEASER -->
+<section class="bg-cream py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8">
+    <div data-reveal>
+      <div class="flex items-end justify-between gap-6">
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/[0.08] bg-white text-charcoal-700">Journal</span>
+          <h2 class="display mt-5 text-[clamp(2.25rem,5vw,3.75rem)]">From our beauty blog.</h2>
+        </div>
+        <a href="/blog" class="group hidden sm:inline-flex items-center gap-1.5 text-[15px] font-medium text-ink hover:text-cherry">
+          More articles
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div data-reveal-stagger class="mt-12 grid gap-6 md:grid-cols-3">
+      <a data-reveal-item href="/blog/how-rent-a-chair-is-changing-the-game-with-muse-avenue/" class="group block">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-peony">
+          <img src="/assets/img/blog-salon-culture.jpg" alt="Black-and-white close-up of hands braiding long dark hair from behind" class="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
+          <div class="absolute inset-0 flex items-end p-6">
+            <span class="eyebrow inline-flex rounded-full bg-white/85 px-2.5 py-1 text-cherry backdrop-blur-sm">Learn</span>
+          </div>
+        </div>
+        <h3 class="mt-5 font-display text-[24px] leading-[1.15] tracking-tight transition-colors group-hover:text-cherry">The Future of Hair &amp; Beauty: How Rent-a-Chair is Changing the Game</h3>
+      </a>
+      <a data-reveal-item href="/blog/baby-botox-review/" class="group block">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-butter">
+          <img src="/assets/img/blog-skincare.jpg" alt="Close-up portrait of a woman with a hydrating eye patch under one eye" class="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
+          <div class="absolute inset-0 flex items-end p-6">
+            <span class="eyebrow inline-flex rounded-full bg-white/85 px-2.5 py-1 text-cherry backdrop-blur-sm">Trends</span>
+          </div>
+        </div>
+        <h3 class="mt-5 font-display text-[24px] leading-[1.15] tracking-tight transition-colors group-hover:text-cherry">'Baby Botox' - a good or bad idea?</h3>
+      </a>
+      <a data-reveal-item href="/blog/top-rated-nail-salons-near-paddington/" class="group block">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-cloud-100">
+          <img src="/assets/img/blog-nails.jpg" alt="Mint-green almond nails holding a dark cherry" class="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
+          <div class="absolute inset-0 flex items-end p-6">
+            <span class="eyebrow inline-flex rounded-full bg-white/85 px-2.5 py-1 text-cherry backdrop-blur-sm">Curated</span>
+          </div>
+        </div>
+        <h3 class="mt-5 font-display text-[24px] leading-[1.15] tracking-tight transition-colors group-hover:text-cherry">Top rated nail salons near Paddington</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="bg-cream py-24 sm:py-32">
+  <div class="mx-auto max-w-4xl px-6 sm:px-8">
+    <div data-reveal>
+      <div class="text-center">
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 eyebrow border-ink/[0.08] bg-white text-charcoal-700">FAQ</span>
+        <h2 class="display mt-5 text-[clamp(2.25rem,5vw,3.75rem)]">Still wondering? Start here.</h2>
+      </div>
+    </div>
+
+    <div data-reveal class="mt-14">
+      <div data-faq class="divide-y divide-ink/[0.08] border-y border-ink/[0.08]">
+        <div class="faq-item">
+          <button type="button" aria-expanded="false" class="flex w-full items-center justify-between gap-6 py-6 text-left">
+            <span class="font-display text-2xl sm:text-[28px] leading-tight tracking-tight text-ink">What services are on Bella?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-panel"><div class="pb-6 pr-12 text-[17px] leading-relaxed text-charcoal-600">All of your usual beauty services are now in one place - eyebrows, hair, makeup, waxing, laser, facials, eyelashes and more. If a local salon offers it, you'll find it on Bella.</div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" aria-expanded="false" class="flex w-full items-center justify-between gap-6 py-6 text-left">
+            <span class="font-display text-2xl sm:text-[28px] leading-tight tracking-tight text-ink">Who is Bella for?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-panel"><div class="pb-6 pr-12 text-[17px] leading-relaxed text-charcoal-600">Bella is for anyone who loves beauty. Whether you're hunting for a new colourist, a brow specialist or just want to see what your friends are raving about - Bella's for you.</div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" aria-expanded="false" class="flex w-full items-center justify-between gap-6 py-6 text-left">
+            <span class="font-display text-2xl sm:text-[28px] leading-tight tracking-tight text-ink">Can I only find and recommend well-known salons?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-panel"><div class="pb-6 pr-12 text-[17px] leading-relaxed text-charcoal-600">Not at all. Bella is built to surface the best beauty in every neighbourhood - from big household names to the hidden gems or freelancers that are being quietly raved about.</div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" aria-expanded="false" class="flex w-full items-center justify-between gap-6 py-6 text-left">
+            <span class="font-display text-2xl sm:text-[28px] leading-tight tracking-tight text-ink">I'm a salon and I'm interested, where can I get more info?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-panel"><div class="pb-6 pr-12 text-[17px] leading-relaxed text-charcoal-600">Head to <a href="/business" class="underline decoration-ink/20 underline-offset-4 hover:decoration-ink">our salon page</a> to see how Bella helps you reach more clients, share offers and grow - or email us at <a href="mailto:hello@bellaapp.au" class="underline decoration-ink/20 underline-offset-4 hover:decoration-ink">hello@bellaapp.au</a>.</div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" aria-expanded="false" class="flex w-full items-center justify-between gap-6 py-6 text-left">
+            <span class="font-display text-2xl sm:text-[28px] leading-tight tracking-tight text-ink">When can I download?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-panel"><div class="pb-6 pr-12 text-[17px] leading-relaxed text-charcoal-600">Bella is live now on iOS. <a href="https://apple.co/3ThFSL2" target="_blank" rel="noopener noreferrer" class="underline decoration-ink/20 underline-offset-4 hover:decoration-ink">Download from the App Store</a> and create your profile in under a minute.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-10 text-center text-[15px] text-charcoal-600">Need something else? <a href="/contact" class="text-cherry underline-offset-4 hover:underline">Contact our team</a>.</p>
+  </div>
+</section>
+
+<!-- OUTRO -->
+<section class="relative isolate overflow-hidden bg-bubblegum text-white">
+  <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_70%_30%,rgba(255,255,255,0.18)_0%,transparent_70%)]"></div>
+  <div class="grain pointer-events-none absolute inset-0 -z-10 opacity-50"></div>
+
+  <img src="/assets/img/star-butter.png" alt="" aria-hidden="true" class="pointer-events-none absolute right-[8%] top-[10%] z-0 size-8 sm:size-10 lg:right-[14%] animate-twinkle drop-shadow-[0_8px_20px_rgba(0,0,0,0.15)]" />
+
+  <div class="relative mx-auto w-full max-w-6xl px-6 sm:px-8 pt-20 sm:pt-24 pb-10">
+    <div class="grid items-start gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
+      <div class="relative">
+        <p class="eyebrow text-white/70">Your invitation</p>
+        <h2 data-reveal class="display mt-6 text-[clamp(2.5rem,6vw,4.5rem)]">
+          <span class="block text-white">Ready to</span>
+          <span class="block text-butter">upgrade your</span>
+          <span class="block text-white">beauty routine?</span>
+        </h2>
+        <p class="mt-8 font-sans text-lg sm:text-xl font-light tracking-tight text-white">See you inside.</p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          {{> store-badges}}
+        </div>
+      </div>
+
+      <div data-reveal style="--reveal-delay: 0.2s" class="relative mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-3xl bg-fawn shadow-[0_30px_80px_-20px_rgba(0,0,0,0.35)] rotate-[2.5deg]">
+          <img src="/assets/img/outro-bedroom.jpg" alt="A woman lying on a bed with vintage curlers in her hair, looking at her phone in warm afternoon light" class="absolute inset-0 size-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="relative mt-8 sm:mt-12 border-y border-white/15 py-4 sm:py-5 overflow-hidden">
+    <div class="flex w-max animate-marquee">
+      <div class="flex shrink-0 items-center gap-6 pr-6">
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">@joinbella.au</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">real recs, real women, real results</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">@joinbella.au</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">real recs, real women, real results</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+      </div>
+      <div aria-hidden="true" class="flex shrink-0 items-center gap-6 pr-6">
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">@joinbella.au</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">real recs, real women, real results</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">@joinbella.au</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+        <span class="font-display text-xl sm:text-2xl leading-none tracking-[-0.01em] text-white">real recs, real women, real results</span>
+        <img src="/assets/img/star-butter.png" alt="" class="size-5 sm:size-6 shrink-0 self-center" />
+      </div>
+    </div>
+  </div>
+</section>
+
+{{> layout-end}}

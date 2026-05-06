@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /playstore
+
+Sitemap: https://bellaapp.au/sitemap.xml
+Host: https://bellaapp.au

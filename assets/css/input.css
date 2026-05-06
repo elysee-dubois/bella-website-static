@@ -1,0 +1,344 @@
+@import "tailwindcss";
+
+/* Tailwind v4 scans @source paths for class names. We point it at the page
+ * and partial sources (HTML strings) plus the JS that may add classes
+ * dynamically (e.g. error states on forms, active tab states). */
+@source "../../pages/**/*.html";
+@source "../../partials/**/*.html";
+@source "../js/**/*.js";
+
+@theme {
+  --color-cherry: #ed2039;
+  --color-cherry-50: #fdecef;
+  --color-cherry-100: #fbd4da;
+  --color-cherry-600: #d61b32;
+  --color-cherry-700: #b8172a;
+
+  --color-bubblegum: #fe5d90;
+  --color-bubblegum-100: #ffd6e2;
+
+  --color-peony: #ffd6df;
+  --color-peony-50: #fff0f4;
+
+  --color-fawn: #f6eae0;
+  --color-fawn-50: #fbf6f1;
+
+  --color-butter: #ffe6a7;
+  --color-butter-50: #fff7df;
+
+  --color-cloud: #9acfe9;
+  --color-cloud-100: #d4ebf6;
+
+  --color-charcoal: #3e3d3e;
+  --color-charcoal-50: #f6f6f6;
+  --color-charcoal-200: #d4d4d4;
+  --color-charcoal-400: #8a898a;
+  --color-charcoal-500: #6e6d6e;
+  --color-charcoal-600: #5b5a5b;
+  --color-charcoal-700: #4a494a;
+  --color-charcoal-800: #2a292a;
+  --color-charcoal-950: #161516;
+
+  --color-cream: #fbf8f4;
+  --color-ink: #161516;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+
+  --tracking-display: -0.022em;
+  --tracking-eyebrow: 0.16em;
+}
+
+:root {
+  --background: var(--color-cream);
+  --foreground: var(--color-ink);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  background: var(--color-cherry);
+  color: white;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  line-height: 1.02;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.grain {
+  position: relative;
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Mantle-style rotating-border glow. The wrapper has 2px of padding and a
+ * conic-gradient pseudo-element sized to fill it exactly; the inner content
+ * sits on top with its own background, leaving the 2px gradient ring
+ * visible around the perimeter. */
+@property --glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes glow-rotate {
+  to { --glow-angle: 360deg; }
+}
+
+.glow-border {
+  position: relative;
+  padding: 2px;
+  isolation: isolate;
+}
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--glow-angle),
+    transparent 0%,
+    transparent 55%,
+    var(--color-cloud) 70%,
+    var(--color-butter) 82%,
+    transparent 100%
+  );
+  animation: glow-rotate 4s linear infinite;
+  pointer-events: none;
+}
+
+/* Reveal-on-scroll. Elements with [data-reveal] start hidden + offset, and
+ * get .is-visible applied by JS once they enter the viewport. Stagger
+ * children of [data-reveal-stagger] receive an automatic delay. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* FAQ accordion: animates max-height for smoothness without measuring. */
+.faq-icon {
+  display: inline-flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(22, 21, 22, 0.1);
+  background: white;
+  color: var(--color-ink);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-item[data-open="true"] .faq-icon {
+  background: var(--color-ink);
+  color: var(--color-cream);
+  border-color: var(--color-ink);
+  transform: rotate(45deg);
+}
+
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-panel > div {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-item[data-open="true"] .faq-panel {
+  grid-template-rows: 1fr;
+}
+.faq-item[data-open="true"] .faq-panel > div {
+  opacity: 1;
+}
+
+/* Sparkle (home outro). Mirrors the React version's keyframe values. */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.6; transform: scale(0.85) rotate(-8deg); }
+  50% { opacity: 1; transform: scale(1) rotate(8deg); }
+}
+.animate-twinkle {
+  animation: twinkle 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+  html { scroll-behavior: auto; }
+  [data-reveal] { opacity: 1; transform: none; }
+}
+
+/* Audience-aware navigation: nav has both consumer-only and business-only
+ * links in the source HTML; this rule hides whichever set doesn't apply on
+ * the current page. The body element receives data-audience from the build. */
+body[data-audience="consumer"] [data-audience-only="business"],
+body[data-audience="business"] [data-audience-only="consumer"] {
+  display: none !important;
+}
+
+/* Nav scroll-state styling. The header carries data-scrolled which nav.js
+ * flips between "true" and "false". Two visual modes:
+ *   - default: full-width, transparent
+ *   - scrolled: floating glass pill, smaller max-width, soft shadow
+ * On the business page (audience=business), the unscrolled state uses the
+ * dark-bar treatment instead of transparent (cream text on the dark hero). */
+[data-nav-root][data-scrolled="true"] [data-nav-bar] {
+  max-width: 1120px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(22, 21, 22, 0.08);
+  border-radius: 9999px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.6) inset, 0 10px 30px -12px rgba(22, 21, 22, 0.18);
+  backdrop-filter: blur(20px);
+}
+@media (min-width: 640px) {
+  [data-nav-root][data-scrolled="true"] [data-nav-bar] {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+[data-nav-root][data-menu-open="true"] [data-nav-drawer] {
+  opacity: 1;
+  visibility: visible;
+}
+[data-nav-root][data-menu-open="false"] [data-nav-drawer] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Form submit buttons have an idle label and a loading label sharing the
+ * same slot. We toggle `.hidden` on whichever one isn't active. The labels
+ * also need `inline-flex` so the spinner sits next to the text — but
+ * Tailwind's display utilities cascade by source order, and `.inline-flex`
+ * comes after `.hidden` in the generated CSS, which would leave both
+ * labels visible. We can't blanket `!important` on `.hidden` because that
+ * breaks responsive patterns like `class="hidden lg:flex"` used in the
+ * nav. Instead, scope the win to just the form labels — the
+ * attribute+class compound selector outranks the bare `.inline-flex`. */
+[data-label-idle].hidden,
+[data-label-loading].hidden {
+  display: none;
+}
+
+/* Spinner used in form submit states. */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  animation: spin 0.7s linear infinite;
+}
+
+/* Long-form legal/article styles. */
+.prose-bella {
+  color: var(--color-charcoal-700, #5b5a5b);
+  font-size: 16px;
+  line-height: 1.75;
+}
+.prose-bella > * + * { margin-top: 1.25em; }
+.prose-bella h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+  margin-top: 2.5em;
+}
+.prose-bella h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: -0.005em;
+  color: var(--color-ink);
+  margin-top: 2em;
+}
+.prose-bella h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  margin-top: 1.5em;
+}
+.prose-bella p {
+  color: var(--color-charcoal-600, #5b5a5b);
+}
+.prose-bella ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.prose-bella ul li + li { margin-top: 0.4em; }
+.prose-bella a {
+  color: var(--color-cherry);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(237, 32, 57, 0.3);
+  transition: text-decoration-color 200ms;
+}
+.prose-bella a:hover { text-decoration-color: rgba(237, 32, 57, 1); }
+.prose-bella strong { color: var(--color-ink); font-weight: 600; }
+.prose-bella .not-prose,
+.prose-bella .not-prose * { margin-top: 0; }
+.prose-bella > .not-prose { margin-top: 2.5em; margin-bottom: 2.5em; }

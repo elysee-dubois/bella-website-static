@@ -1,0 +1,22 @@
+{
+  "name": "bella-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bella marketing site — static HTML + Tailwind, served by GitHub Pages.",
+  "type": "module",
+  "scripts": {
+    "build:html": "node build.mjs",
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --minify",
+    "build": "npm run build:html && npm run build:css",
+    "watch:html": "node build.mjs --watch",
+    "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --watch",
+    "serve": "browser-sync start --server '.' --port 5173 --no-open --no-notify --files '**/*.html,assets/css/styles.css,assets/js/*.js'",
+    "dev": "npm run build && concurrently -k -n html,css,serve -c blue,magenta,green \"npm:watch:html\" \"npm:watch:css\" \"npm:serve\""
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "browser-sync": "^3.0.2",
+    "concurrently": "^9.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}
