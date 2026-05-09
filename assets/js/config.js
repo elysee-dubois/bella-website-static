@@ -1,9 +1,9 @@
 // Single source of truth for the API base URL. Everything else (forms, etc.)
 // imports `apiUrl()` and never builds URLs by hand. Switching is hostname-
 // based — if we're loaded from localhost we hit the dev API on :8787;
-// otherwise we hit the production API at api.site.bellaapp.au.
+// otherwise we hit the production API on Vercel.
 
-const PROD_API = "https://api.site.bellaapp.au";
+const PROD_API = "https://bella-api-bella-app.vercel.app";
 const DEV_API = "http://localhost:8787";
 
 function isLocalHost() {
