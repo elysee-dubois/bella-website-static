@@ -3,7 +3,7 @@
   data-scrolled="false"
   data-menu-open="false"
   data-audience="{{audience}}"
-  class="sticky top-0 z-50 w-full pt-0 px-0 data-[scrolled=true]:pt-3 sm:data-[scrolled=true]:pt-4 data-[scrolled=true]:px-2 sm:data-[scrolled=true]:px-3 transition-[padding] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+  class="group/header sticky top-0 z-50 w-full pt-0 px-0 data-[scrolled=true]:pt-3 sm:data-[scrolled=true]:pt-4 data-[scrolled=true]:px-2 sm:data-[scrolled=true]:px-3 transition-[padding] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
 >
   <div
     class="mx-auto grid h-16 grid-cols-3 items-center transition-[background-color,border-color,box-shadow,backdrop-filter,padding,border-radius,max-width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
@@ -27,12 +27,14 @@
       <a href="/#faq" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink">FAQ</a>
       <a href="/contact" data-audience-only="consumer" class="whitespace-nowrap text-sm transition-colors text-charcoal-600 hover:text-ink">Contact</a>
 
-      <!-- Business links -->
-      <a href="/business#features" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">Features</a>
-      <a href="/business#how-it-works" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">How it works</a>
-      <a href="/blog" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">Blog</a>
-      <a href="/business#faq" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">FAQ</a>
-      <a href="/contact" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream">Contact</a>
+      <!-- Business links. Cream over the dark hero, then dark text once the
+           floating pill kicks in (white background) and cream becomes
+           illegible. -->
+      <a href="/business#features" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream group-data-[scrolled=true]/header:text-charcoal-600 group-data-[scrolled=true]/header:hover:text-ink">Features</a>
+      <a href="/business#how-it-works" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream group-data-[scrolled=true]/header:text-charcoal-600 group-data-[scrolled=true]/header:hover:text-ink">How it works</a>
+      <a href="/blog" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream group-data-[scrolled=true]/header:text-charcoal-600 group-data-[scrolled=true]/header:hover:text-ink">Blog</a>
+      <a href="/business#faq" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream group-data-[scrolled=true]/header:text-charcoal-600 group-data-[scrolled=true]/header:hover:text-ink">FAQ</a>
+      <a href="/contact" data-audience-only="business" class="whitespace-nowrap text-sm transition-colors text-cream/80 hover:text-cream group-data-[scrolled=true]/header:text-charcoal-600 group-data-[scrolled=true]/header:hover:text-ink">Contact</a>
     </nav>
 
     <!-- Right side: CTA + audience toggle -->
