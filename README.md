@@ -2,7 +2,7 @@
 
 Bella App's marketing site — `bellaapp.au`. Static HTML + Tailwind, served by GitHub Pages.
 
-The companion API (contact form + Android waitlist) lives in a separate repo: [bella-api](https://github.com/elysee-dubois/bella-api), deployed to Vercel at `https://bella-api-bella-app.vercel.app`.
+The companion API (contact form + Android waitlist) lives in a separate repo: [bella-api](https://github.com/elysee-dubois/bella-api), deployed to Vercel at `https://bella-website-api-bella-app.vercel.app`.
 
 ## Local dev
 

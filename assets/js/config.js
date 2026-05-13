@@ -3,7 +3,7 @@
 // based — if we're loaded from localhost we hit the dev API on :8787;
 // otherwise we hit the production API on Vercel.
 
-const PROD_API = "https://bella-api-bella-app.vercel.app";
+const PROD_API = "https://bella-website-api-bella-app.vercel.app";
 const DEV_API = "http://localhost:8787";
 
 function isLocalHost() {
